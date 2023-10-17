@@ -17,7 +17,11 @@
   "idRanges": [
     {
       "from": 50100,
-      "to": 55000
+      "to": 50149
+    },
+    {
+      "from": 11154656,
+      "to": 11191181
     }
   ],
   "resourceExposurePolicy": {

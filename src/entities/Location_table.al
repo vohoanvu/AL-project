@@ -1,4 +1,4 @@
-table 50100 "WMS Location"
+table 11154689 "WMS Location"
 {
     DataClassification = ToBeClassified;
 
@@ -12,6 +12,7 @@ table 50100 "WMS Location"
         {
             DataClassification = ToBeClassified;
             TableRelation = "WMS Building"."Code";
+            NotBlank = true;
         }
         field(10; "Name"; Code[20])
         {
@@ -24,6 +25,7 @@ table 50100 "WMS Location"
         field(14; "Zone Code"; Code[10])
         {
             DataClassification = ToBeClassified;
+            NotBlank = true;
         }
     }
 
