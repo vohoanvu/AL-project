@@ -1,4 +1,4 @@
-table 11154692 Carrier
+table 50104 Carrier
 {
     DataClassification = CustomerContent;
     fields

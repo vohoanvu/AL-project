@@ -1,8 +1,9 @@
-page 11154689 "WMS Location List"
+page 50101 "WMS Location List"
 {
     PageType = List;
     SourceTable = "WMS Location";
     ApplicationArea = All;
+    UsageCategory = Lists;
 
     layout
     {

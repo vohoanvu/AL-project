@@ -1,4 +1,4 @@
-table 11154690 "WMS Location"
+table 50100 "WMS Location"
 {
     DataClassification = ToBeClassified;
 
