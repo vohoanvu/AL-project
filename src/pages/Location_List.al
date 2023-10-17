@@ -13,7 +13,7 @@ page 50101 "WMS Location List"
             {
                 field("No."; Rec."No.")
                 {
-                    ApplicationArea = Basic, Suite;
+                    ApplicationArea = All;
                 }
                 field("Building Code"; Rec."Building Code")
                 {
