@@ -1,4 +1,4 @@
-page 50103 "Location_List"
+page 50103 "WMS Location List"
 {
     PageType = List;
     SourceTable = "WMS Location";
@@ -8,17 +8,17 @@ page 50103 "Location_List"
     {
         area(content)
         {
-            repeater(Group)
+            repeater(General)
             {
                 field("No."; Rec."No.")
                 {
-                    ApplicationArea = All;
+                    ApplicationArea = Basic, Suite;
                 }
                 field("Building Code"; Rec."Building Code")
                 {
                     ApplicationArea = All;
                 }
-                field(Name; Rec.Name)
+                field("Name"; Rec."Name")
                 {
                     ApplicationArea = All;
                 }
@@ -26,80 +26,47 @@ page 50103 "Location_List"
                 {
                     ApplicationArea = All;
                 }
-                // ... Add other fields as needed.
+                field("Zone Code"; Rec."Zone Code")
+                {
+                    ApplicationArea = All;
+                }
             }
         }
     }
 
-    actions
-    {
-        area(processing)
-        {
-            action("New Location")
-            {
-                ApplicationArea = All;
-                Image = NewDocument;
-                Promoted = true;
-                PromotedCategory = New;
-                TriggerOnAction = 
-                BEGIN
-                    // Logic for creating a new Location record
-                    Rec.INIT;
-                    PAGE.RUNMODAL(PAGE::"Location Card", Rec);
-                    CurrPage.UPDATE;
-                END;
-            }
+    // actions
+    // {
+    //     area(processing)
+    //     {
+    //         action("New Location")
+    //         {
+    //             ApplicationArea = All;
+    //             Image = NewDocument;
+    //             Promoted = true;
+    //             PromotedCategory = New;
+    //             TriggerOnAction = 
+    //             BEGIN
+    //                 // Logic for creating a new Location record
+    //                 Rec.INIT;
+    //                 PAGE.RUNMODAL(PAGE::"Location Card", Rec);
+    //                 CurrPage.UPDATE;
+    //             END;
+    //         }
 
-            action("Edit Location")
-            {
-                ApplicationArea = All;
-                Image = EditDocument;
-                Promoted = true;
-                PromotedCategory = Process;
-                TriggerOnAction = BEGIN
-                    // Logic for editing the selected Location record
-                    PAGE.RUNMODAL(PAGE::"Location Card", Rec);
-                    CurrPage.UPDATE;
-                END;
-            }
+    //         action("Edit Location")
+    //         {
+    //             ApplicationArea = All;
+    //             Image = EditDocument;
+    //             Promoted = true;
+    //             PromotedCategory = Process;
+    //             TriggerOnAction = BEGIN
+    //                 // Logic for editing the selected Location record
+    //                 PAGE.RUNMODAL(PAGE::"Location Card", Rec);
+    //                 CurrPage.UPDATE;
+    //             END;
+    //         }
 
-            // ... Add other actions as needed.
-        }
-    }
-}
-
-page 50104 "Location Card"
-{
-    PageType = Card;
-    SourceTable = "WMS Location";
-    ApplicationArea = All;
-    Permissions =
-        tabledata "WMS Location" = RIMD;
-
-    layout
-    {
-        area(content)
-        {
-            group(General)
-            {
-                field("No."; Rec."No.")
-                {
-                    ApplicationArea = All;
-                }
-                field("Building Code"; Rec."Building Code")
-                {
-                    ApplicationArea = All;
-                }
-                field(Name; Rec."Name")
-                {
-                    ApplicationArea = All;
-                }
-                field("Parent Location No."; Rec."Parent Location No.")
-                {
-                    ApplicationArea = All;
-                }
-                // ... Add other fields as needed.
-            }
-        }
-    }
+    //         // ... Add other actions as needed.
+    //     }
+    // }
 }

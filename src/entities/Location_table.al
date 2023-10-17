@@ -25,14 +25,6 @@ table 50100 "WMS Location"
         {
             DataClassification = ToBeClassified;
         }
-        field(17; "Receipt"; Boolean)
-        {
-            DataClassification = ToBeClassified;
-        }
-        field(18; "Shipment"; Boolean)
-        {
-            DataClassification = ToBeClassified;
-        }
 
         field(600; "Created Date/Time"; DateTime)
         {
