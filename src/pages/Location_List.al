@@ -1,4 +1,4 @@
-page 50103 "WMS Location List"
+page 11154689 "WMS Location List"
 {
     PageType = List;
     SourceTable = "WMS Location";

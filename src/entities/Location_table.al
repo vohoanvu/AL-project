@@ -1,4 +1,4 @@
-table 50100 "WMS Location"
+table 11154690 "WMS Location"
 {
     DataClassification = ToBeClassified;
 
@@ -25,27 +25,6 @@ table 50100 "WMS Location"
         {
             DataClassification = ToBeClassified;
         }
-
-        field(600; "Created Date/Time"; DateTime)
-        {
-            DataClassification = ToBeClassified;
-            Editable = false;
-        }
-        field(601; "Created User ID"; Text[50])
-        {
-            DataClassification = ToBeClassified;
-            Editable = false;
-        }
-        field(602; "Modified Date/Time"; DateTime)
-        {
-            DataClassification = ToBeClassified;
-            Editable = false;
-        }
-        field(603; "Modified User ID"; Text[50])
-        {
-            DataClassification = ToBeClassified;
-            Editable = false;
-        }
     }
 
     keys
@@ -55,17 +34,5 @@ table 50100 "WMS Location"
             Clustered = true;
         }
     }
-
-    trigger OnInsert()
-    begin
-        "Created Date/Time" := CurrentDateTime;
-        "Created User ID" := UserId;
-    end;
-
-    trigger OnModify()
-    begin
-        "Modified Date/Time" := CurrentDateTime;
-        "Modified User ID" := UserId;
-    end;
 }
 

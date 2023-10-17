@@ -1,7 +1,7 @@
 {
   "id": "6503d4d5-57f7-4d1c-9655-f2d10e510c87",
-  "name": "AL-project",
-  "publisher": "Default publisher",
+  "name": "Vu-AL-test-project-0",
+  "publisher": "Vu-publisher",
   "version": "1.0.0.0",
   "brief": "",
   "description": "",
@@ -16,8 +16,8 @@
   "application": "23.0.0.0",
   "idRanges": [
     {
-      "from": 50100,
-      "to": 50149
+      "from": 11154689,
+      "to": 11200000
     }
   ],
   "resourceExposurePolicy": {
