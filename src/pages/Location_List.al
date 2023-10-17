@@ -1,7 +1,7 @@
 page 50103 "Location_List"
 {
     PageType = List;
-    SourceTable = WMS_Location;
+    SourceTable = "WMS Location";
     ApplicationArea = All;
 
     layout
@@ -71,10 +71,10 @@ page 50103 "Location_List"
 page 50104 "Location Card"
 {
     PageType = Card;
-    SourceTable = WMS_Location;
+    SourceTable = "WMS Location";
     ApplicationArea = All;
     Permissions =
-        tabledata WMS_Location = RIMD;
+        tabledata "WMS Location" = RIMD;
 
     layout
     {

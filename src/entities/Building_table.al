@@ -26,21 +26,21 @@ table 50101 "WMS Building"
         field(20; "Default Receipt Location No."; Code[20])
         {
             DataClassification = ToBeClassified;
-            TableRelation = WMS_Location;
+            TableRelation = "WMS Location";
             Description = 'Default inbound location.';
         }
 
         field(21; "Default Shipment Location No."; Code[20])
         {
             DataClassification = ToBeClassified;
-            TableRelation = WMS_Location;
+            TableRelation = "WMS Location";
             Description = 'Default outbound location.';
         }
 
         field(22; "Default Prod. Location No."; Code[20])
         {
             DataClassification = ToBeClassified;
-            TableRelation = WMS_Location;
+            TableRelation = "WMS Location";
         }
 
         field(24; "Availability Restriction"; Option)
