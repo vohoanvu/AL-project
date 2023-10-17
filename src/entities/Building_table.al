@@ -17,7 +17,7 @@ table 11154656 "WMS Building"
         field(11; "Address No"; Code[20])
         {
             DataClassification = ToBeClassified; //FK reference to Address Table (11191181)
-            NotBlank = true;
+            TableRelation = "WMS Address".No;
         }
         field(20; "Default Receipt Location No"; Code[20])
         {

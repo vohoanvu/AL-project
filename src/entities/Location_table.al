@@ -12,7 +12,6 @@ table 11154689 "WMS Location"
         {
             DataClassification = ToBeClassified;
             TableRelation = "WMS Building"."Code";
-            NotBlank = true;
         }
         field(10; "Name"; Code[20])
         {

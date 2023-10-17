@@ -1,36 +1,33 @@
-page 11154689 "WMS Location List"
+page 11154690 LocationCard
 {
-    PageType = List;
-    SourceTable = "WMS Location";
     ApplicationArea = All;
-    CardPageId = LocationCard;
-    UsageCategory = Lists;
+    Caption = 'LocationCard';
+    PageType = Card;
+    SourceTable = "WMS Location";
 
     layout
     {
         area(content)
         {
-            repeater(General)
+            group(General)
             {
+                Caption = 'General';
+
                 field("No."; Rec."No.")
                 {
-                    ApplicationArea = All;
+                    ToolTip = 'Specifies the value of the No. field.';
                 }
                 field("Building Code"; Rec."Building Code")
                 {
-                    ApplicationArea = All;
-                }
-                field("Name"; Rec."Name")
-                {
-                    ApplicationArea = All;
+                    ApplicationArea = Basic, Suite;
                 }
                 field("Parent Location No."; Rec."Parent Location No.")
                 {
-                    ApplicationArea = All;
+                    ToolTip = 'Specifies the value of the Parent Location No. field.';
                 }
                 field("Zone Code"; Rec."Zone Code")
                 {
-                    ApplicationArea = All;
+                    ToolTip = 'Specifies the value of the Zone Code field.';
                 }
             }
         }
