@@ -1,6 +1,8 @@
 table 11154656 "WMS Building"
 {
     DataClassification = ToBeClassified;
+    LookupPageId = "WMS BuildingList";
+    DrillDownPageId = BuildingCard;
 
     fields
     {

@@ -21,6 +21,10 @@ page 11154690 LocationCard
                 {
                     ApplicationArea = Basic, Suite;
                 }
+                field("Name"; Rec.Name)
+                {
+                    ApplicationArea = Basic, Suite;
+                }
                 field("Parent Location No."; Rec."Parent Location No.")
                 {
                     ToolTip = 'Specifies the value of the Parent Location No. field.';
