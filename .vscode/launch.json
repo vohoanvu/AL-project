@@ -9,7 +9,7 @@
             "environmentName": "Sandbox",
             "server": "https://businesscentral.dynamics.com",
             "tenant": "6d1dde6a-207f-4173-acb7-9d5222a783a1",
-            "startupObjectId": 22,
+            "startupObjectId": 50102,
             "startupObjectType": "Page",
             "breakOnError": "All",
             "launchBrowser": true,

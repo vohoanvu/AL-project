@@ -7,7 +7,7 @@ table 11191181 "WMS Address"
         field(1; "No"; Code[20])
         {
             DataClassification = ToBeClassified;
-            TableRelation = "No. Series"."Code";
+            Editable = false;
         }
         field(10; "Name"; Text[100])
         {
@@ -37,8 +37,8 @@ table 11191181 "WMS Address"
         field(17; "No. Series"; Code[20])
         {
             DataClassification = ToBeClassified;
-            NotBlank = true;
-            TableRelation = "No. Series"."Code";
+            Caption = 'System No. Series ID';
+            TableRelation = "No. Series";
         }
         field(18; "Post Code"; Code[20])
         {
@@ -89,8 +89,27 @@ table 11191181 "WMS Address"
         myInt: Integer;
 
     trigger OnInsert()
+    var
+        numberSeriesConfig: Record EntityNoSeriesConfig;
+        NoSeriesManager: Codeunit NoSeriesManagement;
+        NoSeriesRec: Record "No. Series";
     begin
+        if Rec.No = '' then begin
+            numberSeriesConfig.Get();
+            //Rec.TestField("No");
+            NoSeriesManager.InitSeries(
+                numberSeriesConfig."WMS Address No",
+                numberSeriesConfig."WMS Address No",
+                WorkDate(),
+                Rec.No,
+                numberSeriesConfig."WMS Address No");
+        end;
 
+        if Rec."No. Series" = '' then begin
+            if NoSeriesRec.GET('ADDR') then begin
+                Rec."No. Series" := NoSeriesRec.Code;
+            end;
+        end;
     end;
 
     trigger OnModify()

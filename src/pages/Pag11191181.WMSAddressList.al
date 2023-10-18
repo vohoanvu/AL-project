@@ -12,6 +12,11 @@ page 11191181 "WMS Address List"
         {
             repeater(General)
             {
+                field(No; Rec.No)
+                {
+                    ToolTip = 'Specifies the value of the Name field.';
+                    Editable = false;
+                }
                 field(Name; Rec.Name)
                 {
                     ToolTip = 'Specifies the value of the Name field.';
