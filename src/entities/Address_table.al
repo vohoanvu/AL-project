@@ -98,11 +98,11 @@ table 11191181 "WMS Address"
             numberSeriesConfig.Get();
             //Rec.TestField("No");
             NoSeriesManager.InitSeries(
-                numberSeriesConfig."WMS Address No",
-                numberSeriesConfig."WMS Address No",
+                numberSeriesConfig."WMS Generated Series Number",
+                numberSeriesConfig."WMS Generated Series Number",
                 WorkDate(),
                 Rec.No,
-                numberSeriesConfig."WMS Address No");
+                numberSeriesConfig."WMS Generated Series Number");
         end;
 
         if Rec."No. Series" = '' then begin

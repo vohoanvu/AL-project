@@ -14,9 +14,9 @@ page 50101 "Entity NoSeries Configuration"
             {
                 Caption = 'General';
 
-                field("WMS Address No"; Rec."WMS Address No")
+                field("WMS Generated Series No."; Rec."WMS Generated Series Number")
                 {
-                    ToolTip = 'Specifies the value of the WMS Address No field.';
+                    ToolTip = 'Specifies the value of the WMS Generated Series No. field!';
                 }
             }
         }

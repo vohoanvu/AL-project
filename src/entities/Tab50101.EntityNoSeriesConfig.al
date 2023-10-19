@@ -9,9 +9,9 @@ table 50101 EntityNoSeriesConfig
         {
             Caption = 'Primary Key';
         }
-        field(2; "WMS Address No"; Code[20])
+        field(2; "WMS Generated Series Number"; Code[20])
         {
-            Caption = 'WMS Address No';
+            Caption = 'WMS Generated Series No.';
             TableRelation = "No. Series";
         }
     }
