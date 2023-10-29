@@ -151,6 +151,9 @@ table 11172749 "Contract Header"
         numberSeriesConfig: Record EntityNoSeriesConfig;
         NoSeriesManager: Codeunit NoSeriesManagement;
         NoSeriesRec: Record "No. Series";
+        TMSAgreementLine: Record "TMS Agreement Line";
+        LineNoSeries: Code[20];
+        LineNo: Integer;
     begin
         if Rec."No. Series" = '' then begin
             if NoSeriesRec.GET('TMS_CONTR') then begin
@@ -160,5 +163,14 @@ table 11172749 "Contract Header"
 
         Rec."Document Date" := WorkDate();
         Rec.SystemCreatedBy := UserId;
+
+        // Insert a corresponding record into the TMS Agreement Line table
+        TMSAgreementLine.Init();
+        TMSAgreementLine."Contract No." := Rec."No.";
+        // Use the No. Series functionality to generate the Line No.
+        LineNoSeries := 'TMS_LINE'; // Replace with your actual No. Series for line numbers
+        Evaluate(LineNo, NoSeriesManager.GetNextNo(LineNoSeries, WorkDate(), true));
+        TMSAgreementLine."Line No." := LineNo;
+        TMSAgreementLine.Insert();
     end;
 }
