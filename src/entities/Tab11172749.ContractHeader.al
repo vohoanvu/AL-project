@@ -161,16 +161,13 @@ table 11172749 "Contract Header"
             end;
         end;
 
-        Rec."Document Date" := WorkDate();
-        Rec.SystemCreatedBy := UserId;
-
         // Insert a corresponding record into the TMS Agreement Line table
-        TMSAgreementLine.Init();
-        TMSAgreementLine."Contract No." := Rec."No.";
+        // TMSAgreementLine.Init();
+        // TMSAgreementLine."Contract No." := Rec."No.";
         // Use the No. Series functionality to generate the Line No.
-        LineNoSeries := 'TMS_LINE'; // Replace with your actual No. Series for line numbers
-        Evaluate(LineNo, NoSeriesManager.GetNextNo(LineNoSeries, WorkDate(), true));
-        TMSAgreementLine."Line No." := LineNo;
-        TMSAgreementLine.Insert();
+        // LineNoSeries := 'TMS_LINE'; // Replace with your actual No. Series for line numbers
+        // Evaluate(LineNo, NoSeriesManager.GetNextNo(LineNoSeries, WorkDate(), true));
+        // TMSAgreementLine."Line No." := LineNo;
+        // TMSAgreementLine.Insert();
     end;
 }

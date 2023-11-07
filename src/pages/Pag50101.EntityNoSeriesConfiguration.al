@@ -1,4 +1,4 @@
-page 50101 "Entity NoSeries Configuration"
+page 50103 "Entity NoSeries Configuration"
 {
     ApplicationArea = All;
     Caption = 'Entity NoSeries Configuration';
